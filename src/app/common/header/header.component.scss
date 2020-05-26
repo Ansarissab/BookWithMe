@@ -1,0 +1,37 @@
+//@import '_variables';
+.navbar {
+    padding: 20px;
+    margin-bottom: 40px;
+    .bwm-search {
+        height: 50px;
+        width: 300px;
+    }
+    .inp-search {
+        height: 40px !important;
+    }
+    .search-btn {
+        width: 100px;
+    }
+    .navbar-brand {
+        margin-right: 30px;
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: rgb(71, 111, 241);
+        font-weight: 500;
+    }
+    .nav-item {
+        font-size: 14px;
+    }
+    .btn-bwm-search {
+        border-color: rgb(71, 111, 241);
+        color: rgb(71, 111, 241);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+            border-color: rgb(71, 111, 241) !important;
+            color: rgb(71, 111, 241) !important;
+            box-shadow: none;
+        }
+    }
+}
