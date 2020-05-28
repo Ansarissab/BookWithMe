@@ -8,7 +8,7 @@
             "schematics": {},
             "root": "",
             "sourceRoot": "src",
-            "prefix": "app",
+            "prefix": "bwm",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
@@ -125,4 +125,5 @@
         }
     },
     "defaultProject": "AngularTestApp"
+
 }
