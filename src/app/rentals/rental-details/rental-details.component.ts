@@ -6,7 +6,7 @@ import { Rental } from '../shared/rental.model';
 @Component({
   selector: 'bwm-rental-details',
   templateUrl: './rental-details.component.html',
-  styleUrls: ['./rental-details.component.css']
+  styleUrls: ['./rental-details.component.scss']
 })
 export class RentalDetailsComponent implements OnInit {
 
