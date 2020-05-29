@@ -9,6 +9,7 @@ import { RentalsComponent } from './rentals/rentals.component';
 import { TempComponent } from './temp/temp.component';
 import { RentalModule } from './rentals/rental.module';
 
+
 const routes: Routes =[
   {path: '', redirectTo:'/rentals', pathMatch:'full'},
   {path: 'temp',component:TempComponent}
