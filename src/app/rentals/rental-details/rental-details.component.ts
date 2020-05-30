@@ -22,6 +22,9 @@ export class RentalDetailsComponent implements OnInit {
        //console.log(params.rentalId);
       }
     );
+
+
+    
   }
 
   getRental(rentalId:string){
