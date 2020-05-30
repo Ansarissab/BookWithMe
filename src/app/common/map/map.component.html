@@ -1,0 +1,16 @@
+<agm-map (mapReady)="mapReadyHandler()" [latitude]="lat" [longitude]="lng" [zoom]="15">
+    <ng-container *ngIf="!isPositionError && lat && lng">
+        <agm-circle [latitude]="lat" [longitude]="lng" [radius]="400" [fillColor]="'#F44336'" [fillOpacity]="0.4">
+        </agm-circle>
+        <agm-marker [latitude]="lat" [longitude]="lng">
+            <agm-info-window [latitude]="lat" [longitude]="lng" [maxWidth]="300" [isOpen]="true">
+                <strong> {{location}} </strong>
+            </agm-info-window>
+        </agm-marker>
+    </ng-container>
+    <ng-container *ngIf="isPositionError">
+        <agm-info-window *ngIf="isPositionError" [latitude]="lat" [longitude]="lng" [maxWidth]="300" [isOpen]="true">
+            Opps...! there is a problem in finding the location, this is maybe due to false location, please re-enter your location.
+        </agm-info-window>
+    </ng-container>
+</agm-map>
