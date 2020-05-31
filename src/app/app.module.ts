@@ -6,20 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { RentalsComponent } from './rentals/rentals.component';
-import { TempComponent } from './temp/temp.component';
 import { RentalModule } from './rentals/rental.module';
 
 const routes: Routes =[
-  {path: '', redirectTo:'/rentals', pathMatch:'full'},
-  {path: 'temp',component:TempComponent}
+  {path: '', redirectTo:'/rentals', pathMatch:'full'}
   
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    TempComponent
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
