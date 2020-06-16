@@ -44,8 +44,8 @@ class FakeDB {
         ]
     }
     async cleanDb() {
-        await User.remove({});
-        await Rental.remove({});
+        await User.deleteMany({});
+        await Rental.deleteMany({});
     }
     pushDataToDB() {
         const user = new User(this.users[0]);

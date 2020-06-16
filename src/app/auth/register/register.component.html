@@ -1,0 +1,56 @@
+<section id="register">
+    <div class="bwm-form">
+        <div class="row">
+            <div class="col-md-5">
+                <h1 class="page-title">Register</h1>
+                <form #registerForm="ngForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input [(ngModel)]="formData.username" #username="ngModel" name="username" type="text" class="form-control" id="username" required>
+                        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                            <div *ngIf="username.errors.required">Username is required.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="formData.email" #email="ngModel" name="email" type="email" class="form-control" id="email" required>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                            <div *ngIf="email.errors.required">Email is required.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input [(ngModel)]="formData.password" #password="ngModel" name="password" type="password" class="form-control" id="password" required>
+                        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                            <div *ngIf="password.errors.required">Password is required.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordConfirmation">Confirm Password</label>
+                        <input [(ngModel)]="formData.passwordConfirmation" #passwordConfirmation="ngModel" name="passwordConfirmation" type="password" class="form-control" id="passwordConfirmation" required>
+                        <div *ngIf="passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched)" class="alert alert-danger">
+                            <div *ngIf="passwordConfirmation.errors.required">Password Confirmation is required.</div>
+                        </div>
+                    </div>
+                    <input [disabled]="!registerForm.form.valid" (click)="register()" type="submit" class=" btn btn-submit">
+                </form>
+                <div *ngIf="errors.length >0" class="alert alert-danger">
+                    <p *ngFor="let err of errors">
+                        {{err.detail}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 ml-auto">
+                <div class="image-container">
+                    <div class="catchphrase">
+                        <h2 class="catchphrase-heading">As our member you have access to most awesome places in the world.</h2>
+                    </div>
+                    <img class="catchphrase-image" src="../../../assets//images/11.2 register-image.jpg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

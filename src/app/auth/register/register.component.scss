@@ -1,0 +1,48 @@
+$main-text-color:#484848;
+$main-color: rgb(71, 111, 241);
+.bwm-form {
+    label {
+        font-size: large !important;
+    }
+    color: $main-text-color;
+    form {
+        margin-bottom: 10px;
+    }
+    .alert {
+        p {
+            margin: 0;
+        }
+    }
+    h1 {
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .image-container {
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    .form-text {
+        font-size: 13px;
+    }
+    .catchphrase {
+        text-align: center;
+        font-size: 42px;
+        position: absolute;
+        color: #f1f1f1;
+        background-color: rgba($color: #509ee7, $alpha: 0.3);
+        // opacity: .4;
+        padding: 40px;
+        margin-top: 50px;
+        letter-spacing: 1px;
+    }
+    .catchphrase-image {
+        height: 600px;
+    }
+    .btn-submit {
+        background-color: rgb(11, 64, 238);
+        color: white;
+    }
+}

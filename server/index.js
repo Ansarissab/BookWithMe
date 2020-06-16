@@ -32,7 +32,5 @@ mongoose.connect(
     }
 ).then(() => {
     const fakedb = new FakeDb();
-    fakedb.seedDb();
-}).catch((err) => {
-    console.log("Error: " + err);
+    // fakedb.seedDb();
 });
