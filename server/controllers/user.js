@@ -12,7 +12,6 @@ exports.auth = function(req, res) {
                 detail: "Provide Email, Password and Confirmation Password."
             }
         });
-        debugger;
     }
     User.findOne({ email }, function(err, user) {
         if (err) {
@@ -26,14 +25,13 @@ exports.auth = function(req, res) {
                 }
             });
         }
-        debugger;
+
         if (user.hasSamePassword(password)) {
             const token = jwt.sign({
                 userId: user._id,
                 username: user.username
             }, config.SECRET, { expiresIn: '1h' });
             return res.json(token);
-            debugger;
 
         } else {
             return res.status(422).send({

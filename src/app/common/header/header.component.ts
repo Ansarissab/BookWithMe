@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { templateJitUrl } from '@angular/compiler';
+import { AuthService } from '../../auth/shared/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: "bwm-header",
@@ -7,6 +9,10 @@ import { templateJitUrl } from '@angular/compiler';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent{
-
+    constructor(public  auth: AuthService, private router: Router){}
+    logout(){
+        this.auth.logout();
+        this.router.navigate(['/login']);
+    }
 }
 

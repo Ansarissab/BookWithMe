@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RentalService } from '../shared/rental.service';
 import { Rental } from '../shared/rental.model';
 
+
 @Component({
   selector: 'bwm-rental-details',
   templateUrl: './rental-details.component.html',
