@@ -1,9 +1,8 @@
 <div class="booking">
-    <h3 class="booking-price">$ {{price}} <span class="booking-per-night">per night</span></h3>
+    <h3 class="booking-price">${{price}} <span class="booking-per-night">per night</span></h3>
     <hr>
     <label>Dates</label>
-    <!-- daterangepicker [options]="options" (selected)="selectedDate($event, daterange)"  -->
-    <input type="text" class="form-control daterangepicker-input" name="daterangeInput" />
+    <input type="text" class="form-control daterangepicker-input" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event, daterange)" />
     <div class="form-group">
         <label for="guests">Guests</label>
         <input type="number" class="form-control" id="guests" aria-describedby="emailHelp" placeholder="">

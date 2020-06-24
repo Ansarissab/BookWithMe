@@ -32,7 +32,7 @@
         "mapbox-gl": "^1.10.1",
         "moment": "^2.26.0",
         "mongoose": "^5.9.16",
-        "ng2-daterangepicker": "^2.0.12",
+        "ng2-daterangepicker": "^3.0.1",
         "ngx-pipes": "^2.7.3",
         "nodemon": "^2.0.4",
         "rxjs": "^6.5.5",

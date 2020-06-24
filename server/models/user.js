@@ -20,7 +20,8 @@ const userSchema = new Schema({
         required: 'Password is required',
         min: [4, 'Too short, min is 4 characters']
     },
-    rentals: [{ type: Schema.Types.ObjectId, ref: 'Rental' }]
+    rentals: [{ type: Schema.Types.ObjectId, ref: 'Rental' }],
+    bookings: { type: Schema.Types.ObjectId, ref: 'Bookings' }
 });
 
 userSchema.methods.hasSamePassword = function(requestedpassword) {

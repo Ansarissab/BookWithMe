@@ -9,7 +9,7 @@ exports.auth = function(req, res) {
         return res.status(422).send({
             errors: {
                 title: "Missing data...!",
-                detail: "Provide Email, Password and Confirmation Password."
+                detail: "Provide Email, Password."
             }
         });
     }

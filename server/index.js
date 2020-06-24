@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
 const rentalRoutes = require('./routes/rantals');
 const usersRoutes = require('./routes/users');
+const bookingsRoutes = require('./routes/bookings');
 
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use('/api/v1/rentals', rentalRoutes);
 app.use('/api/v1/users', usersRoutes);
+app.use('/api/v1/bookings', bookingsRoutes);
 
 app.listen(PORT, function() {
     // something
